@@ -1,0 +1,304 @@
+# Th1.DefaultApi
+
+All URIs are relative to *http://localhost:8080/v1*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**convertTable**](DefaultApi.md#convertTable) | **POST** /converter/{tableStructureId} | Convert a table and save it to the database
+[**createTableStructure**](DefaultApi.md#createTableStructure) | **POST** /table-structures | Create a new table structure
+[**fileConvertTable**](DefaultApi.md#fileConvertTable) | **POST** /converter/file | Convert a table and return the result as a file
+[**getTableStructure**](DefaultApi.md#getTableStructure) | **GET** /table-structures/{id} | Get a table structure by id
+[**getTableStructures**](DefaultApi.md#getTableStructures) | **GET** /table-structures | Get all table structures
+[**previewConvertTable**](DefaultApi.md#previewConvertTable) | **POST** /converter/preview | Convert a table and return a preview of the result
+
+
+
+## convertTable
+
+> convertTable(tableStructureId, file)
+
+Convert a table and save it to the database
+
+### Example
+
+```javascript
+import Th1 from 'th1';
+let defaultClient = Th1.ApiClient.instance;
+// Configure HTTP basic authorization: BasicAuth
+let BasicAuth = defaultClient.authentications['BasicAuth'];
+BasicAuth.username = 'YOUR USERNAME';
+BasicAuth.password = 'YOUR PASSWORD';
+
+let apiInstance = new Th1.DefaultApi();
+let tableStructureId = 789; // Number | 
+let file = "/path/to/file"; // File | 
+apiInstance.convertTable(tableStructureId, file, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **tableStructureId** | **Number**|  | 
+ **file** | **File**|  | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+- **Content-Type**: multipart/form-data
+- **Accept**: Not defined
+
+
+## createTableStructure
+
+> createTableStructure(tableStructure)
+
+Create a new table structure
+
+### Example
+
+```javascript
+import Th1 from 'th1';
+let defaultClient = Th1.ApiClient.instance;
+// Configure HTTP basic authorization: BasicAuth
+let BasicAuth = defaultClient.authentications['BasicAuth'];
+BasicAuth.username = 'YOUR USERNAME';
+BasicAuth.password = 'YOUR PASSWORD';
+
+let apiInstance = new Th1.DefaultApi();
+let tableStructure = new Th1.TableStructure(); // TableStructure | 
+apiInstance.createTableStructure(tableStructure, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **tableStructure** | [**TableStructure**](TableStructure.md)|  | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: Not defined
+
+
+## fileConvertTable
+
+> File fileConvertTable(file, tableStructure)
+
+Convert a table and return the result as a file
+
+### Example
+
+```javascript
+import Th1 from 'th1';
+let defaultClient = Th1.ApiClient.instance;
+// Configure HTTP basic authorization: BasicAuth
+let BasicAuth = defaultClient.authentications['BasicAuth'];
+BasicAuth.username = 'YOUR USERNAME';
+BasicAuth.password = 'YOUR PASSWORD';
+
+let apiInstance = new Th1.DefaultApi();
+let file = "/path/to/file"; // File | 
+let tableStructure = new Th1.TableStructure(); // TableStructure | 
+apiInstance.fileConvertTable(file, tableStructure, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **file** | **File**|  | 
+ **tableStructure** | [**TableStructure**](TableStructure.md)|  | 
+
+### Return type
+
+**File**
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+- **Content-Type**: multipart/form-data
+- **Accept**: application/octet-stream
+
+
+## getTableStructure
+
+> TableStructure getTableStructure(id)
+
+Get a table structure by id
+
+### Example
+
+```javascript
+import Th1 from 'th1';
+let defaultClient = Th1.ApiClient.instance;
+// Configure HTTP basic authorization: BasicAuth
+let BasicAuth = defaultClient.authentications['BasicAuth'];
+BasicAuth.username = 'YOUR USERNAME';
+BasicAuth.password = 'YOUR PASSWORD';
+
+let apiInstance = new Th1.DefaultApi();
+let id = 789; // Number | 
+apiInstance.getTableStructure(id, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Number**|  | 
+
+### Return type
+
+[**TableStructure**](TableStructure.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getTableStructures
+
+> [TableStructureSummary] getTableStructures()
+
+Get all table structures
+
+### Example
+
+```javascript
+import Th1 from 'th1';
+let defaultClient = Th1.ApiClient.instance;
+// Configure HTTP basic authorization: BasicAuth
+let BasicAuth = defaultClient.authentications['BasicAuth'];
+BasicAuth.username = 'YOUR USERNAME';
+BasicAuth.password = 'YOUR PASSWORD';
+
+let apiInstance = new Th1.DefaultApi();
+apiInstance.getTableStructures((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**[TableStructureSummary]**](TableStructureSummary.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## previewConvertTable
+
+> [[String]] previewConvertTable(file, tableStructure)
+
+Convert a table and return a preview of the result
+
+### Example
+
+```javascript
+import Th1 from 'th1';
+let defaultClient = Th1.ApiClient.instance;
+// Configure HTTP basic authorization: BasicAuth
+let BasicAuth = defaultClient.authentications['BasicAuth'];
+BasicAuth.username = 'YOUR USERNAME';
+BasicAuth.password = 'YOUR PASSWORD';
+
+let apiInstance = new Th1.DefaultApi();
+let file = "/path/to/file"; // File | 
+let tableStructure = new Th1.TableStructure(); // TableStructure | 
+apiInstance.previewConvertTable(file, tableStructure, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **file** | **File**|  | 
+ **tableStructure** | [**TableStructure**](TableStructure.md)|  | 
+
+### Return type
+
+**[[String]]**
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+- **Content-Type**: multipart/form-data
+- **Accept**: application/json
+

@@ -1,0 +1,14 @@
+# Th1.ConverterType
+
+## Enum
+
+
+* `REMOVE_GROUPED_HEADER` (value: `"REMOVE_GROUPED_HEADER"`)
+
+* `FILL_EMPTY_CELLS` (value: `"FILL_EMPTY_CELLS"`)
+
+* `REMOVE_COLUMN_BY_INDEX` (value: `"REMOVE_COLUMN_BY_INDEX"`)
+
+* `REMOVE_ROW_BY_INDEX` (value: `"REMOVE_ROW_BY_INDEX"`)
+
+

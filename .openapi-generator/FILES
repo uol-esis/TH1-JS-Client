@@ -1,0 +1,17 @@
+.babelrc
+docs/ConverterType.md
+docs/DefaultApi.md
+docs/Structure.md
+docs/StructureSummary.md
+docs/TableStructure.md
+docs/TableStructureSummary.md
+mocha.opts
+package.json
+src/ApiClient.js
+src/api/DefaultApi.js
+src/index.js
+src/model/ConverterType.js
+src/model/Structure.js
+src/model/StructureSummary.js
+src/model/TableStructure.js
+src/model/TableStructureSummary.js
