@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **name** | **String** |  | 
 **delimiter** | **String** |  | 
 **structures** | [**[Structure]**](Structure.md) |  | 
-**endRow** | **Number** |  | 
-**endColumn** | **Number** |  | 
+**endRow** | **Number** |  | [optional] 
+**endColumn** | **Number** |  | [optional] 
 
 

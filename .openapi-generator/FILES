@@ -1,4 +1,5 @@
 .babelrc
+README.md
 docs/ConverterType.md
 docs/DefaultApi.md
 docs/Structure.md

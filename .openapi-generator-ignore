@@ -26,4 +26,3 @@
 test/
 .gitignore
 git_push.sh
-README.md

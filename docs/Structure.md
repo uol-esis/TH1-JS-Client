@@ -11,5 +11,6 @@ Name | Type | Description | Notes
 **startColumn** | **Number** |  | [optional] 
 **endRow** | **Number** |  | [optional] 
 **endColumn** | **Number** |  | [optional] 
+**headerNames** | **[String]** |  | [optional] 
 
 
