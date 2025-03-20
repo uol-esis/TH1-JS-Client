@@ -255,7 +255,7 @@ This endpoint does not need any parameter.
 
 ## previewConvertTable
 
-> [[String]] previewConvertTable(file, tableStructure)
+> [[String]] previewConvertTable(file, tableStructure, opts)
 
 Convert a table and return a preview of the result
 
@@ -272,7 +272,10 @@ BasicAuth.password = 'YOUR PASSWORD';
 let apiInstance = new Th1.DefaultApi();
 let file = "/path/to/file"; // File | 
 let tableStructure = new Th1.TableStructure(); // TableStructure | 
-apiInstance.previewConvertTable(file, tableStructure, (error, data, response) => {
+let opts = {
+  'limit': 10 // Number | 
+};
+apiInstance.previewConvertTable(file, tableStructure, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -288,6 +291,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **file** | **File**|  | 
  **tableStructure** | [**TableStructure**](TableStructure.md)|  | 
+ **limit** | **Number**|  | [optional] [default to 10]
 
 ### Return type
 
