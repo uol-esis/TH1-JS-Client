@@ -65,7 +65,7 @@ null (empty response body)
 
 ## createTableStructure
 
-> createTableStructure(tableStructure)
+> Number createTableStructure(tableStructure)
 
 Create a new table structure
 
@@ -85,7 +85,7 @@ apiInstance.createTableStructure(tableStructure, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -99,7 +99,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+**Number**
 
 ### Authorization
 
@@ -108,7 +108,7 @@ null (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: Not defined
+- **Accept**: application/json
 
 
 ## fileConvertTable
