@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**convertTable**](DefaultApi.md#convertTable) | **POST** /converter/{tableStructureId} | Convert a table and save it to the database
 [**createTableStructure**](DefaultApi.md#createTableStructure) | **POST** /table-structures | Create a new table structure
 [**fileConvertTable**](DefaultApi.md#fileConvertTable) | **POST** /converter/file | Convert a table and return the result as a file
+[**generateTableStructure**](DefaultApi.md#generateTableStructure) | **POST** /table-structures/generate | Generate a tableStructure and return the result as a json
 [**getTableStructure**](DefaultApi.md#getTableStructure) | **GET** /table-structures/{id} | Get a table structure by id
 [**getTableStructures**](DefaultApi.md#getTableStructures) | **GET** /table-structures | Get all table structures
 [**previewConvertTable**](DefaultApi.md#previewConvertTable) | **POST** /converter/preview | Convert a table and return a preview of the result
@@ -159,6 +160,54 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/octet-stream
+
+
+## generateTableStructure
+
+> TableStructure generateTableStructure(file)
+
+Generate a tableStructure and return the result as a json
+
+### Example
+
+```javascript
+import Th1 from 'th1';
+let defaultClient = Th1.ApiClient.instance;
+// Configure HTTP basic authorization: BasicAuth
+let BasicAuth = defaultClient.authentications['BasicAuth'];
+BasicAuth.username = 'YOUR USERNAME';
+BasicAuth.password = 'YOUR PASSWORD';
+
+let apiInstance = new Th1.DefaultApi();
+let file = "/path/to/file"; // File | 
+apiInstance.generateTableStructure(file, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **file** | **File**|  | 
+
+### Return type
+
+[**TableStructure**](TableStructure.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+- **Content-Type**: multipart/form-data
+- **Accept**: application/json
 
 
 ## getTableStructure
