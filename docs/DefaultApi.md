@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**convertTable**](DefaultApi.md#convertTable) | **POST** /converter/{tableStructureId} | Convert a table and save it to the database
 [**createTableStructure**](DefaultApi.md#createTableStructure) | **POST** /table-structures | Create a new table structure
+[**deleteTableStructure**](DefaultApi.md#deleteTableStructure) | **DELETE** /table-structures | Delete table structure by id
 [**fileConvertTable**](DefaultApi.md#fileConvertTable) | **POST** /converter/file | Convert a table and return the result as a file
 [**generateTableStructure**](DefaultApi.md#generateTableStructure) | **POST** /table-structures/generate | Generate a tableStructure and return the result as a json
 [**getTableStructure**](DefaultApi.md#getTableStructure) | **GET** /table-structures/{id} | Get a table structure by id
@@ -110,6 +111,54 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json
 - **Accept**: application/json
+
+
+## deleteTableStructure
+
+> deleteTableStructure(id)
+
+Delete table structure by id
+
+### Example
+
+```javascript
+import Th1 from 'th1';
+let defaultClient = Th1.ApiClient.instance;
+// Configure HTTP basic authorization: BasicAuth
+let BasicAuth = defaultClient.authentications['BasicAuth'];
+BasicAuth.username = 'YOUR USERNAME';
+BasicAuth.password = 'YOUR PASSWORD';
+
+let apiInstance = new Th1.DefaultApi();
+let id = 789; // Number | 
+apiInstance.deleteTableStructure(id, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Number**|  | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
 
 ## fileConvertTable

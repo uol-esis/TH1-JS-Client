@@ -1,7 +1,12 @@
 .babelrc
 README.md
+docs/AddHeaderNameStructure.md
 docs/ConverterType.md
 docs/DefaultApi.md
+docs/FillEmptyRowStructure.md
+docs/RemoveColumnByIndexStructure.md
+docs/RemoveGroupedHeaderStructure.md
+docs/RemoveRowByIndexStructure.md
 docs/Structure.md
 docs/StructureSummary.md
 docs/TableStructure.md
@@ -11,7 +16,12 @@ package.json
 src/ApiClient.js
 src/api/DefaultApi.js
 src/index.js
+src/model/AddHeaderNameStructure.js
 src/model/ConverterType.js
+src/model/FillEmptyRowStructure.js
+src/model/RemoveColumnByIndexStructure.js
+src/model/RemoveGroupedHeaderStructure.js
+src/model/RemoveRowByIndexStructure.js
 src/model/Structure.js
 src/model/StructureSummary.js
 src/model/TableStructure.js
