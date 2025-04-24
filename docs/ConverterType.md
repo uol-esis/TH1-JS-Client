@@ -13,4 +13,10 @@
 
 * `ADD_HEADER_NAME` (value: `"ADD_HEADER_NAME"`)
 
+* `REMOVE_FOOTER` (value: `"REMOVE_FOOTER"`)
+
+* `REMOVE_HEADER` (value: `"REMOVE_HEADER"`)
+
+* `REPLACE_ENTRIES` (value: `"REPLACE_ENTRIES"`)
+
 

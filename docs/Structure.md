@@ -10,5 +10,12 @@ Name | Type | Description | Notes
 **startRow** | **Number** |  | [optional] 
 **startColumn** | **Number** |  | [optional] 
 **headerNames** | **[String]** |  | 
+**threshold** | **Number** |  | [optional] 
+**blackList** | **[String]** |  | [optional] 
+**search** | **String** |  | [optional] 
+**regexSearch** | **String** |  | [optional] 
+**replacement** | **String** |  | 
+**endRow** | **Number** |  | [optional] 
+**endColumn** | **Number** |  | [optional] 
 
 
