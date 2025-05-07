@@ -10,6 +10,7 @@ docs/RemoveGroupedHeaderStructure.md
 docs/RemoveHeaderStructure.md
 docs/RemoveRowByIndexStructure.md
 docs/ReplaceEntriesStructure.md
+docs/SplitRowStructure.md
 docs/Structure.md
 docs/StructureSummary.md
 docs/TableStructure.md
@@ -28,6 +29,7 @@ src/model/RemoveGroupedHeaderStructure.js
 src/model/RemoveHeaderStructure.js
 src/model/RemoveRowByIndexStructure.js
 src/model/ReplaceEntriesStructure.js
+src/model/SplitRowStructure.js
 src/model/Structure.js
 src/model/StructureSummary.js
 src/model/TableStructure.js

@@ -19,4 +19,6 @@
 
 * `REPLACE_ENTRIES` (value: `"REPLACE_ENTRIES"`)
 
+* `SPLIT_ROW` (value: `"SPLIT_ROW"`)
+
 
