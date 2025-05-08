@@ -21,6 +21,7 @@ class {{classname}} {
         }
         var match = 0;
         var errorMessages = [];
+        var discriminatorInstance = null;
         {{#discriminator.mappedModels}}
         {{#description}}
         // {{{description}}}
@@ -206,11 +207,9 @@ class {{classname}} {
                 // validate the object
                 {{{modelName}}}.validateJSON(instance); // throw an exception if no match
                 // create {{{modelName}}} from JS object
-                if (instance.{{discriminator.propertyName}} == "{{mappingName}}") {
-                    this.actualInstance = instance;
-                } else {
-                    this.actualInstance = {{{modelName}}}.constructFromObject(instance);
-                }
+                this.actualInstance = {{{modelName}}}.constructFromObject(instance);
+                if (instance.{{discriminator.propertyName}} == "{{mappingName}}")
+                    discriminatorInstance = this.actualInstance;
             }
             {{/isPrimitiveType}}
             match++;
@@ -220,7 +219,9 @@ class {{classname}} {
         }
 
         {{/discriminator.mappedModels}}
-        if (match > 1) {
+        if (discriminatorInstance) {
+            this.actualInstance = discriminatorInstance;
+        } else if (match > 1) {
             throw new Error("Multiple matches found constructing `{{{classname}}}` with oneOf schemas {{#oneOf}}{{{.}}}{{^-last}}, {{/-last}}{{/oneOf}}. Input: " + JSON.stringify(instance));
         } else if (match === 0) {
             this.actualInstance = null; // clear the actual instance in case there are multiple matches

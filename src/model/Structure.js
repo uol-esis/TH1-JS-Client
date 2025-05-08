@@ -41,6 +41,7 @@ class Structure {
         }
         var match = 0;
         var errorMessages = [];
+        var discriminatorInstance = null;
         try {
             if (typeof instance === "AddHeaderNameStructure") {
                 this.actualInstance = instance;
@@ -49,11 +50,9 @@ class Structure {
                 // validate the object
                 AddHeaderNameStructure.validateJSON(instance); // throw an exception if no match
                 // create AddHeaderNameStructure from JS object
-                if (instance.converterType == "ADD_HEADER_NAME") {
-                    this.actualInstance = instance;
-                } else {
-                    this.actualInstance = AddHeaderNameStructure.constructFromObject(instance);
-                }
+                this.actualInstance = AddHeaderNameStructure.constructFromObject(instance);
+                if (instance.converterType == "ADD_HEADER_NAME")
+                    discriminatorInstance = this.actualInstance;
             }
             match++;
         } catch(err) {
@@ -69,11 +68,9 @@ class Structure {
                 // validate the object
                 FillEmptyRowStructure.validateJSON(instance); // throw an exception if no match
                 // create FillEmptyRowStructure from JS object
-                if (instance.converterType == "FILL_EMPTY_ROW") {
-                    this.actualInstance = instance;
-                } else {
-                    this.actualInstance = FillEmptyRowStructure.constructFromObject(instance);
-                }
+                this.actualInstance = FillEmptyRowStructure.constructFromObject(instance);
+                if (instance.converterType == "FILL_EMPTY_ROW")
+                    discriminatorInstance = this.actualInstance;
             }
             match++;
         } catch(err) {
@@ -89,11 +86,9 @@ class Structure {
                 // validate the object
                 RemoveColumnByIndexStructure.validateJSON(instance); // throw an exception if no match
                 // create RemoveColumnByIndexStructure from JS object
-                if (instance.converterType == "REMOVE_COLUMN_BY_INDEX") {
-                    this.actualInstance = instance;
-                } else {
-                    this.actualInstance = RemoveColumnByIndexStructure.constructFromObject(instance);
-                }
+                this.actualInstance = RemoveColumnByIndexStructure.constructFromObject(instance);
+                if (instance.converterType == "REMOVE_COLUMN_BY_INDEX")
+                    discriminatorInstance = this.actualInstance;
             }
             match++;
         } catch(err) {
@@ -109,11 +104,9 @@ class Structure {
                 // validate the object
                 RemoveFooterStructure.validateJSON(instance); // throw an exception if no match
                 // create RemoveFooterStructure from JS object
-                if (instance.converterType == "REMOVE_FOOTER") {
-                    this.actualInstance = instance;
-                } else {
-                    this.actualInstance = RemoveFooterStructure.constructFromObject(instance);
-                }
+                this.actualInstance = RemoveFooterStructure.constructFromObject(instance);
+                if (instance.converterType == "REMOVE_FOOTER")
+                    discriminatorInstance = this.actualInstance;
             }
             match++;
         } catch(err) {
@@ -129,11 +122,9 @@ class Structure {
                 // validate the object
                 RemoveGroupedHeaderStructure.validateJSON(instance); // throw an exception if no match
                 // create RemoveGroupedHeaderStructure from JS object
-                if (instance.converterType == "REMOVE_GROUPED_HEADER") {
-                    this.actualInstance = instance;
-                } else {
-                    this.actualInstance = RemoveGroupedHeaderStructure.constructFromObject(instance);
-                }
+                this.actualInstance = RemoveGroupedHeaderStructure.constructFromObject(instance);
+                if (instance.converterType == "REMOVE_GROUPED_HEADER")
+                    discriminatorInstance = this.actualInstance;
             }
             match++;
         } catch(err) {
@@ -149,11 +140,9 @@ class Structure {
                 // validate the object
                 RemoveHeaderStructure.validateJSON(instance); // throw an exception if no match
                 // create RemoveHeaderStructure from JS object
-                if (instance.converterType == "REMOVE_HEADER") {
-                    this.actualInstance = instance;
-                } else {
-                    this.actualInstance = RemoveHeaderStructure.constructFromObject(instance);
-                }
+                this.actualInstance = RemoveHeaderStructure.constructFromObject(instance);
+                if (instance.converterType == "REMOVE_HEADER")
+                    discriminatorInstance = this.actualInstance;
             }
             match++;
         } catch(err) {
@@ -169,11 +158,9 @@ class Structure {
                 // validate the object
                 RemoveRowByIndexStructure.validateJSON(instance); // throw an exception if no match
                 // create RemoveRowByIndexStructure from JS object
-                if (instance.converterType == "REMOVE_ROW_BY_INDEX") {
-                    this.actualInstance = instance;
-                } else {
-                    this.actualInstance = RemoveRowByIndexStructure.constructFromObject(instance);
-                }
+                this.actualInstance = RemoveRowByIndexStructure.constructFromObject(instance);
+                if (instance.converterType == "REMOVE_ROW_BY_INDEX")
+                    discriminatorInstance = this.actualInstance;
             }
             match++;
         } catch(err) {
@@ -189,11 +176,9 @@ class Structure {
                 // validate the object
                 ReplaceEntriesStructure.validateJSON(instance); // throw an exception if no match
                 // create ReplaceEntriesStructure from JS object
-                if (instance.converterType == "REPLACE_ENTRIES") {
-                    this.actualInstance = instance;
-                } else {
-                    this.actualInstance = ReplaceEntriesStructure.constructFromObject(instance);
-                }
+                this.actualInstance = ReplaceEntriesStructure.constructFromObject(instance);
+                if (instance.converterType == "REPLACE_ENTRIES")
+                    discriminatorInstance = this.actualInstance;
             }
             match++;
         } catch(err) {
@@ -209,11 +194,9 @@ class Structure {
                 // validate the object
                 SplitRowStructure.validateJSON(instance); // throw an exception if no match
                 // create SplitRowStructure from JS object
-                if (instance.converterType == "SPLIT_ROW") {
-                    this.actualInstance = instance;
-                } else {
-                    this.actualInstance = SplitRowStructure.constructFromObject(instance);
-                }
+                this.actualInstance = SplitRowStructure.constructFromObject(instance);
+                if (instance.converterType == "SPLIT_ROW")
+                    discriminatorInstance = this.actualInstance;
             }
             match++;
         } catch(err) {
@@ -221,7 +204,9 @@ class Structure {
             errorMessages.push("Failed to construct SplitRowStructure: " + err)
         }
 
-        if (match > 1) {
+        if (discriminatorInstance) {
+            this.actualInstance = discriminatorInstance;
+        } else if (match > 1) {
             throw new Error("Multiple matches found constructing `Structure` with oneOf schemas AddHeaderNameStructure, FillEmptyRowStructure, RemoveColumnByIndexStructure, RemoveFooterStructure, RemoveGroupedHeaderStructure, RemoveHeaderStructure, RemoveRowByIndexStructure, ReplaceEntriesStructure, SplitRowStructure. Input: " + JSON.stringify(instance));
         } else if (match === 0) {
             this.actualInstance = null; // clear the actual instance in case there are multiple matches
