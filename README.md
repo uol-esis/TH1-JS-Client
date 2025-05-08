@@ -93,4 +93,13 @@ Authentication schemes defined for the API:
 
 1. Update the URL to the OpenAPI Document in the `generate.sh` file
 2. Run the `generate.sh` script
-3. Revert irrelevant changes in the `README.md` file. Especially the installation instructions and this section.
+3. Review changes
+
+# Updating the OpenAPI Generator
+
+1. Update the OpenAPI Generator version in the `generate.sh` and `export-templates.sh` files
+2. Run the `export-templates.sh` script
+3. Review changes and revert changes in templates where necessary to allow oneOf to work
+4. Delete unchanged templates
+5. Run the `generate.sh` script
+6. Review changes
