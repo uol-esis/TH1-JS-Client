@@ -15,19 +15,19 @@ import ApiClient from '../ApiClient';
 import ConverterType from './ConverterType';
 
 /**
- * The RemoveHeaderStructure model module.
- * @module model/RemoveHeaderStructure
+ * The RemoveInvalidRowsStructure model module.
+ * @module model/RemoveInvalidRowsStructure
  * @version 1.10.0
  */
-class RemoveHeaderStructure {
+class RemoveInvalidRowsStructure {
     /**
-     * Constructs a new <code>RemoveHeaderStructure</code>.
-     * @alias module:model/RemoveHeaderStructure
+     * Constructs a new <code>RemoveInvalidRowsStructure</code>.
+     * @alias module:model/RemoveInvalidRowsStructure
      * @param converterType {module:model/ConverterType} 
      */
     constructor(converterType) { 
         
-        RemoveHeaderStructure.initialize(this, converterType);
+        RemoveInvalidRowsStructure.initialize(this, converterType);
     }
 
     /**
@@ -40,15 +40,15 @@ class RemoveHeaderStructure {
     }
 
     /**
-     * Constructs a <code>RemoveHeaderStructure</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>RemoveInvalidRowsStructure</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/RemoveHeaderStructure} obj Optional instance to populate.
-     * @return {module:model/RemoveHeaderStructure} The populated <code>RemoveHeaderStructure</code> instance.
+     * @param {module:model/RemoveInvalidRowsStructure} obj Optional instance to populate.
+     * @return {module:model/RemoveInvalidRowsStructure} The populated <code>RemoveInvalidRowsStructure</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new RemoveHeaderStructure();
+            obj = obj || new RemoveInvalidRowsStructure();
 
             if (data.hasOwnProperty('converterType')) {
                 obj['converterType'] = ConverterType.constructFromObject(data['converterType']);
@@ -64,13 +64,13 @@ class RemoveHeaderStructure {
     }
 
     /**
-     * Validates the JSON data with respect to <code>RemoveHeaderStructure</code>.
+     * Validates the JSON data with respect to <code>RemoveInvalidRowsStructure</code>.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>RemoveHeaderStructure</code>.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>RemoveInvalidRowsStructure</code>.
      */
     static validateJSON(data) {
         // check to make sure all required properties are present in the JSON string
-        for (const property of RemoveHeaderStructure.RequiredProperties) {
+        for (const property of RemoveInvalidRowsStructure.RequiredProperties) {
             if (!data.hasOwnProperty(property)) {
                 throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
             }
@@ -86,27 +86,27 @@ class RemoveHeaderStructure {
 
 }
 
-RemoveHeaderStructure.RequiredProperties = ["converterType"];
+RemoveInvalidRowsStructure.RequiredProperties = ["converterType"];
 
 /**
  * @member {module:model/ConverterType} converterType
  */
-RemoveHeaderStructure.prototype['converterType'] = undefined;
+RemoveInvalidRowsStructure.prototype['converterType'] = undefined;
 
 /**
  * @member {Number} threshold
  */
-RemoveHeaderStructure.prototype['threshold'] = undefined;
+RemoveInvalidRowsStructure.prototype['threshold'] = undefined;
 
 /**
  * @member {Array.<String>} blackList
  */
-RemoveHeaderStructure.prototype['blackList'] = undefined;
+RemoveInvalidRowsStructure.prototype['blackList'] = undefined;
 
 
 
 
 
 
-export default RemoveHeaderStructure;
+export default RemoveInvalidRowsStructure;
 

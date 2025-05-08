@@ -8,7 +8,9 @@ docs/RemoveColumnByIndexStructure.md
 docs/RemoveFooterStructure.md
 docs/RemoveGroupedHeaderStructure.md
 docs/RemoveHeaderStructure.md
+docs/RemoveInvalidRowsStructure.md
 docs/RemoveRowByIndexStructure.md
+docs/RemoveTrailingColumnStructure.md
 docs/ReplaceEntriesStructure.md
 docs/SplitRowStructure.md
 docs/Structure.md
@@ -27,7 +29,9 @@ src/model/RemoveColumnByIndexStructure.js
 src/model/RemoveFooterStructure.js
 src/model/RemoveGroupedHeaderStructure.js
 src/model/RemoveHeaderStructure.js
+src/model/RemoveInvalidRowsStructure.js
 src/model/RemoveRowByIndexStructure.js
+src/model/RemoveTrailingColumnStructure.js
 src/model/ReplaceEntriesStructure.js
 src/model/SplitRowStructure.js
 src/model/Structure.js

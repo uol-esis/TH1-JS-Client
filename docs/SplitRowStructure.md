@@ -6,8 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **converterType** | [**ConverterType**](ConverterType.md) |  | 
 **columnIndex** | **Number** |  | 
-**delimiter** | **String** |  | [optional] [default to &#39;
-&#39;]
+**delimiter** | **String** |  | [optional] 
 **startRow** | **Number** |  | [optional] 
 **endRow** | **Number** |  | [optional] 
 
