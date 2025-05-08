@@ -41,52 +41,23 @@ class Structure {
         }
         var match = 0;
         var errorMessages = [];
+        var discriminatorInstance = null;
         try {
-            if (typeof instance === "RemoveRowByIndexStructure") {
+            if (typeof instance === "AddHeaderNameStructure") {
                 this.actualInstance = instance;
             } else {
                 // plain JS object
                 // validate the object
-                RemoveRowByIndexStructure.validateJSON(instance); // throw an exception if no match
-                // create RemoveRowByIndexStructure from JS object
-                this.actualInstance = RemoveRowByIndexStructure.constructFromObject(instance);
+                AddHeaderNameStructure.validateJSON(instance); // throw an exception if no match
+                // create AddHeaderNameStructure from JS object
+                this.actualInstance = AddHeaderNameStructure.constructFromObject(instance);
+                if (instance.converterType == "ADD_HEADER_NAME")
+                    discriminatorInstance = this.actualInstance;
             }
             match++;
         } catch(err) {
-            // json data failed to deserialize into RemoveRowByIndexStructure
-            errorMessages.push("Failed to construct RemoveRowByIndexStructure: " + err)
-        }
-
-        try {
-            if (typeof instance === "RemoveColumnByIndexStructure") {
-                this.actualInstance = instance;
-            } else {
-                // plain JS object
-                // validate the object
-                RemoveColumnByIndexStructure.validateJSON(instance); // throw an exception if no match
-                // create RemoveColumnByIndexStructure from JS object
-                this.actualInstance = RemoveColumnByIndexStructure.constructFromObject(instance);
-            }
-            match++;
-        } catch(err) {
-            // json data failed to deserialize into RemoveColumnByIndexStructure
-            errorMessages.push("Failed to construct RemoveColumnByIndexStructure: " + err)
-        }
-
-        try {
-            if (typeof instance === "RemoveGroupedHeaderStructure") {
-                this.actualInstance = instance;
-            } else {
-                // plain JS object
-                // validate the object
-                RemoveGroupedHeaderStructure.validateJSON(instance); // throw an exception if no match
-                // create RemoveGroupedHeaderStructure from JS object
-                this.actualInstance = RemoveGroupedHeaderStructure.constructFromObject(instance);
-            }
-            match++;
-        } catch(err) {
-            // json data failed to deserialize into RemoveGroupedHeaderStructure
-            errorMessages.push("Failed to construct RemoveGroupedHeaderStructure: " + err)
+            // json data failed to deserialize into AddHeaderNameStructure
+            errorMessages.push("Failed to construct AddHeaderNameStructure: " + err)
         }
 
         try {
@@ -98,6 +69,8 @@ class Structure {
                 FillEmptyRowStructure.validateJSON(instance); // throw an exception if no match
                 // create FillEmptyRowStructure from JS object
                 this.actualInstance = FillEmptyRowStructure.constructFromObject(instance);
+                if (instance.converterType == "FILL_EMPTY_ROW")
+                    discriminatorInstance = this.actualInstance;
             }
             match++;
         } catch(err) {
@@ -106,35 +79,21 @@ class Structure {
         }
 
         try {
-            if (typeof instance === "AddHeaderNameStructure") {
+            if (typeof instance === "RemoveColumnByIndexStructure") {
                 this.actualInstance = instance;
             } else {
                 // plain JS object
                 // validate the object
-                AddHeaderNameStructure.validateJSON(instance); // throw an exception if no match
-                // create AddHeaderNameStructure from JS object
-                this.actualInstance = AddHeaderNameStructure.constructFromObject(instance);
+                RemoveColumnByIndexStructure.validateJSON(instance); // throw an exception if no match
+                // create RemoveColumnByIndexStructure from JS object
+                this.actualInstance = RemoveColumnByIndexStructure.constructFromObject(instance);
+                if (instance.converterType == "REMOVE_COLUMN_BY_INDEX")
+                    discriminatorInstance = this.actualInstance;
             }
             match++;
         } catch(err) {
-            // json data failed to deserialize into AddHeaderNameStructure
-            errorMessages.push("Failed to construct AddHeaderNameStructure: " + err)
-        }
-
-        try {
-            if (typeof instance === "RemoveHeaderStructure") {
-                this.actualInstance = instance;
-            } else {
-                // plain JS object
-                // validate the object
-                RemoveHeaderStructure.validateJSON(instance); // throw an exception if no match
-                // create RemoveHeaderStructure from JS object
-                this.actualInstance = RemoveHeaderStructure.constructFromObject(instance);
-            }
-            match++;
-        } catch(err) {
-            // json data failed to deserialize into RemoveHeaderStructure
-            errorMessages.push("Failed to construct RemoveHeaderStructure: " + err)
+            // json data failed to deserialize into RemoveColumnByIndexStructure
+            errorMessages.push("Failed to construct RemoveColumnByIndexStructure: " + err)
         }
 
         try {
@@ -146,11 +105,67 @@ class Structure {
                 RemoveFooterStructure.validateJSON(instance); // throw an exception if no match
                 // create RemoveFooterStructure from JS object
                 this.actualInstance = RemoveFooterStructure.constructFromObject(instance);
+                if (instance.converterType == "REMOVE_FOOTER")
+                    discriminatorInstance = this.actualInstance;
             }
             match++;
         } catch(err) {
             // json data failed to deserialize into RemoveFooterStructure
             errorMessages.push("Failed to construct RemoveFooterStructure: " + err)
+        }
+
+        try {
+            if (typeof instance === "RemoveGroupedHeaderStructure") {
+                this.actualInstance = instance;
+            } else {
+                // plain JS object
+                // validate the object
+                RemoveGroupedHeaderStructure.validateJSON(instance); // throw an exception if no match
+                // create RemoveGroupedHeaderStructure from JS object
+                this.actualInstance = RemoveGroupedHeaderStructure.constructFromObject(instance);
+                if (instance.converterType == "REMOVE_GROUPED_HEADER")
+                    discriminatorInstance = this.actualInstance;
+            }
+            match++;
+        } catch(err) {
+            // json data failed to deserialize into RemoveGroupedHeaderStructure
+            errorMessages.push("Failed to construct RemoveGroupedHeaderStructure: " + err)
+        }
+
+        try {
+            if (typeof instance === "RemoveHeaderStructure") {
+                this.actualInstance = instance;
+            } else {
+                // plain JS object
+                // validate the object
+                RemoveHeaderStructure.validateJSON(instance); // throw an exception if no match
+                // create RemoveHeaderStructure from JS object
+                this.actualInstance = RemoveHeaderStructure.constructFromObject(instance);
+                if (instance.converterType == "REMOVE_HEADER")
+                    discriminatorInstance = this.actualInstance;
+            }
+            match++;
+        } catch(err) {
+            // json data failed to deserialize into RemoveHeaderStructure
+            errorMessages.push("Failed to construct RemoveHeaderStructure: " + err)
+        }
+
+        try {
+            if (typeof instance === "RemoveRowByIndexStructure") {
+                this.actualInstance = instance;
+            } else {
+                // plain JS object
+                // validate the object
+                RemoveRowByIndexStructure.validateJSON(instance); // throw an exception if no match
+                // create RemoveRowByIndexStructure from JS object
+                this.actualInstance = RemoveRowByIndexStructure.constructFromObject(instance);
+                if (instance.converterType == "REMOVE_ROW_BY_INDEX")
+                    discriminatorInstance = this.actualInstance;
+            }
+            match++;
+        } catch(err) {
+            // json data failed to deserialize into RemoveRowByIndexStructure
+            errorMessages.push("Failed to construct RemoveRowByIndexStructure: " + err)
         }
 
         try {
@@ -162,6 +177,8 @@ class Structure {
                 ReplaceEntriesStructure.validateJSON(instance); // throw an exception if no match
                 // create ReplaceEntriesStructure from JS object
                 this.actualInstance = ReplaceEntriesStructure.constructFromObject(instance);
+                if (instance.converterType == "REPLACE_ENTRIES")
+                    discriminatorInstance = this.actualInstance;
             }
             match++;
         } catch(err) {
@@ -178,6 +195,8 @@ class Structure {
                 SplitRowStructure.validateJSON(instance); // throw an exception if no match
                 // create SplitRowStructure from JS object
                 this.actualInstance = SplitRowStructure.constructFromObject(instance);
+                if (instance.converterType == "SPLIT_ROW")
+                    discriminatorInstance = this.actualInstance;
             }
             match++;
         } catch(err) {
@@ -185,7 +204,9 @@ class Structure {
             errorMessages.push("Failed to construct SplitRowStructure: " + err)
         }
 
-        if (match > 1) {
+        if (discriminatorInstance) {
+            this.actualInstance = discriminatorInstance;
+        } else if (match > 1) {
             throw new Error("Multiple matches found constructing `Structure` with oneOf schemas AddHeaderNameStructure, FillEmptyRowStructure, RemoveColumnByIndexStructure, RemoveFooterStructure, RemoveGroupedHeaderStructure, RemoveHeaderStructure, RemoveRowByIndexStructure, ReplaceEntriesStructure, SplitRowStructure. Input: " + JSON.stringify(instance));
         } else if (match === 0) {
             this.actualInstance = null; // clear the actual instance in case there are multiple matches
