@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **name** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
 **rowIndex** | **[Number]** |  | 
-**columnIndex** | **Number** |  | 
+**columnIndex** | **[Number]** |  | 
 **startRow** | **Number** |  | [optional] 
 **startColumn** | **Number** |  | [optional] 
 **headerNames** | **[String]** |  | 
@@ -20,5 +20,7 @@ Name | Type | Description | Notes
 **endRow** | **Number** |  | [optional] 
 **endColumn** | **Number** |  | [optional] 
 **delimiter** | **String** |  | [optional] 
+**headerName** | **String** |  | 
+**precedenceOrder** | **[Number]** |  | [optional] 
 
 

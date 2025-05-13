@@ -12,6 +12,7 @@ Method | HTTP request | Description
 [**getTableStructure**](DefaultApi.md#getTableStructure) | **GET** /table-structures/{id} | Get a table structure by id
 [**getTableStructures**](DefaultApi.md#getTableStructures) | **GET** /table-structures | Get all table structures
 [**previewConvertTable**](DefaultApi.md#previewConvertTable) | **POST** /converter/preview | Convert a table and return a preview of the result
+[**submitFeedback**](DefaultApi.md#submitFeedback) | **POST** /feedback | Submit feedback
 
 
 
@@ -402,5 +403,53 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: multipart/form-data
+- **Accept**: application/json
+
+
+## submitFeedback
+
+> Number submitFeedback(feedback)
+
+Submit feedback
+
+### Example
+
+```javascript
+import Th1 from 'th1';
+let defaultClient = Th1.ApiClient.instance;
+// Configure HTTP basic authorization: BasicAuth
+let BasicAuth = defaultClient.authentications['BasicAuth'];
+BasicAuth.username = 'YOUR USERNAME';
+BasicAuth.password = 'YOUR PASSWORD';
+
+let apiInstance = new Th1.DefaultApi();
+let feedback = new Th1.Feedback(); // Feedback | 
+apiInstance.submitFeedback(feedback, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **feedback** | [**Feedback**](Feedback.md)|  | 
+
+### Return type
+
+**Number**
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
 - **Accept**: application/json
 

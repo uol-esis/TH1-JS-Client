@@ -3,7 +3,9 @@ README.md
 docs/AddHeaderNameStructure.md
 docs/ConverterType.md
 docs/DefaultApi.md
+docs/Feedback.md
 docs/FillEmptyRowStructure.md
+docs/MergeColumnsStructure.md
 docs/RemoveColumnByIndexStructure.md
 docs/RemoveFooterStructure.md
 docs/RemoveGroupedHeaderStructure.md
@@ -24,7 +26,9 @@ src/api/DefaultApi.js
 src/index.js
 src/model/AddHeaderNameStructure.js
 src/model/ConverterType.js
+src/model/Feedback.js
 src/model/FillEmptyRowStructure.js
+src/model/MergeColumnsStructure.js
 src/model/RemoveColumnByIndexStructure.js
 src/model/RemoveFooterStructure.js
 src/model/RemoveGroupedHeaderStructure.js
