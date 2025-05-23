@@ -15,20 +15,20 @@ import ApiClient from '../ApiClient';
 import ConverterType from './ConverterType';
 
 /**
- * The RemoveRowByIndexStructure model module.
- * @module model/RemoveRowByIndexStructure
+ * The FillEmptyColumnStructure model module.
+ * @module model/FillEmptyColumnStructure
  * @version 1.14.2
  */
-class RemoveRowByIndexStructure {
+class FillEmptyColumnStructure {
     /**
-     * Constructs a new <code>RemoveRowByIndexStructure</code>.
-     * @alias module:model/RemoveRowByIndexStructure
+     * Constructs a new <code>FillEmptyColumnStructure</code>.
+     * @alias module:model/FillEmptyColumnStructure
      * @param converterType {module:model/ConverterType} 
-     * @param rowIndex {Array.<Number>} 
+     * @param columnIndex {Array.<Number>} 
      */
-    constructor(converterType, rowIndex) { 
+    constructor(converterType, columnIndex) { 
         
-        RemoveRowByIndexStructure.initialize(this, converterType, rowIndex);
+        FillEmptyColumnStructure.initialize(this, converterType, columnIndex);
     }
 
     /**
@@ -36,47 +36,47 @@ class RemoveRowByIndexStructure {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, converterType, rowIndex) { 
+    static initialize(obj, converterType, columnIndex) { 
         obj['converterType'] = converterType;
-        obj['rowIndex'] = rowIndex;
+        obj['columnIndex'] = columnIndex;
     }
 
     /**
-     * Constructs a <code>RemoveRowByIndexStructure</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>FillEmptyColumnStructure</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/RemoveRowByIndexStructure} obj Optional instance to populate.
-     * @return {module:model/RemoveRowByIndexStructure} The populated <code>RemoveRowByIndexStructure</code> instance.
+     * @param {module:model/FillEmptyColumnStructure} obj Optional instance to populate.
+     * @return {module:model/FillEmptyColumnStructure} The populated <code>FillEmptyColumnStructure</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new RemoveRowByIndexStructure();
+            obj = obj || new FillEmptyColumnStructure();
 
             if (data.hasOwnProperty('converterType')) {
                 obj['converterType'] = ConverterType.constructFromObject(data['converterType']);
             }
-            if (data.hasOwnProperty('rowIndex')) {
-                obj['rowIndex'] = ApiClient.convertToType(data['rowIndex'], ['Number']);
+            if (data.hasOwnProperty('columnIndex')) {
+                obj['columnIndex'] = ApiClient.convertToType(data['columnIndex'], ['Number']);
             }
         }
         return obj;
     }
 
     /**
-     * Validates the JSON data with respect to <code>RemoveRowByIndexStructure</code>.
+     * Validates the JSON data with respect to <code>FillEmptyColumnStructure</code>.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>RemoveRowByIndexStructure</code>.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>FillEmptyColumnStructure</code>.
      */
     static validateJSON(data) {
         // check to make sure all required properties are present in the JSON string
-        for (const property of RemoveRowByIndexStructure.RequiredProperties) {
+        for (const property of FillEmptyColumnStructure.RequiredProperties) {
             if (!data.hasOwnProperty(property)) {
                 throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
             }
         }
         // ensure the json data is an array
-        if (!Array.isArray(data['rowIndex'])) {
-            throw new Error("Expected the field `rowIndex` to be an array in the JSON data but got " + data['rowIndex']);
+        if (!Array.isArray(data['columnIndex'])) {
+            throw new Error("Expected the field `columnIndex` to be an array in the JSON data but got " + data['columnIndex']);
         }
 
         return true;
@@ -85,22 +85,22 @@ class RemoveRowByIndexStructure {
 
 }
 
-RemoveRowByIndexStructure.RequiredProperties = ["converterType", "rowIndex"];
+FillEmptyColumnStructure.RequiredProperties = ["converterType", "columnIndex"];
 
 /**
  * @member {module:model/ConverterType} converterType
  */
-RemoveRowByIndexStructure.prototype['converterType'] = undefined;
+FillEmptyColumnStructure.prototype['converterType'] = undefined;
 
 /**
- * @member {Array.<Number>} rowIndex
+ * @member {Array.<Number>} columnIndex
  */
-RemoveRowByIndexStructure.prototype['rowIndex'] = undefined;
+FillEmptyColumnStructure.prototype['columnIndex'] = undefined;
 
 
 
 
 
 
-export default RemoveRowByIndexStructure;
+export default FillEmptyColumnStructure;
 

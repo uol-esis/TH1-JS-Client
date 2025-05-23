@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**convertTable**](DefaultApi.md#convertTable) | **POST** /converter/{tableStructureId} | Convert a table and save it to the database
 [**createTableStructure**](DefaultApi.md#createTableStructure) | **POST** /table-structures | Create a new table structure
-[**deleteTableStructure**](DefaultApi.md#deleteTableStructure) | **DELETE** /table-structures | Delete table structure by id
+[**deleteTableStructure**](DefaultApi.md#deleteTableStructure) | **DELETE** /table-structures/{id} | Delete table structure by id
 [**fileConvertTable**](DefaultApi.md#fileConvertTable) | **POST** /converter/file | Convert a table and return the result as a file
 [**generateTableStructure**](DefaultApi.md#generateTableStructure) | **POST** /table-structures/generate | Generate a tableStructure and return the result as a json
 [**getTableStructure**](DefaultApi.md#getTableStructure) | **GET** /table-structures/{id} | Get a table structure by id
@@ -408,7 +408,7 @@ Name | Type | Description  | Notes
 
 ## submitFeedback
 
-> Number submitFeedback(feedback)
+> String submitFeedback(feedback)
 
 Submit feedback
 
@@ -442,7 +442,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Number**
+**String**
 
 ### Authorization
 

@@ -4,6 +4,7 @@ docs/AddHeaderNameStructure.md
 docs/ConverterType.md
 docs/DefaultApi.md
 docs/Feedback.md
+docs/FillEmptyColumnStructure.md
 docs/FillEmptyRowStructure.md
 docs/MergeColumnsStructure.md
 docs/RemoveColumnByIndexStructure.md
@@ -27,6 +28,7 @@ src/index.js
 src/model/AddHeaderNameStructure.js
 src/model/ConverterType.js
 src/model/Feedback.js
+src/model/FillEmptyColumnStructure.js
 src/model/FillEmptyRowStructure.js
 src/model/MergeColumnsStructure.js
 src/model/RemoveColumnByIndexStructure.js
