@@ -214,7 +214,7 @@ Name | Type | Description  | Notes
 
 ## generateTableStructure
 
-> TableStructure generateTableStructure(file)
+> TableStructureGenerationResponse generateTableStructure(file, settings)
 
 Generate a tableStructure and return the result as a json
 
@@ -230,7 +230,8 @@ BasicAuth.password = 'YOUR PASSWORD';
 
 let apiInstance = new Th1.DefaultApi();
 let file = "/path/to/file"; // File | 
-apiInstance.generateTableStructure(file, (error, data, response) => {
+let settings = new Th1.TableStructureGenerationSettings(); // TableStructureGenerationSettings | 
+apiInstance.generateTableStructure(file, settings, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -245,10 +246,11 @@ apiInstance.generateTableStructure(file, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **file** | **File**|  | 
+ **settings** | [**TableStructureGenerationSettings**](TableStructureGenerationSettings.md)|  | 
 
 ### Return type
 
-[**TableStructure**](TableStructure.md)
+[**TableStructureGenerationResponse**](TableStructureGenerationResponse.md)
 
 ### Authorization
 
