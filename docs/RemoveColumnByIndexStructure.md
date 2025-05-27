@@ -5,6 +5,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **converterType** | [**ConverterType**](ConverterType.md) |  | 
-**columnIndex** | **[Number]** |  | 
+**columnIndex** | **[Number]** | The indices of the columns to remove | 
 
 

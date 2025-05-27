@@ -5,6 +5,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **converterType** | [**ConverterType**](ConverterType.md) |  | 
-**headerNames** | **[String]** |  | 
+**headerNames** | **[String]** | The header names | 
 
 

@@ -5,6 +5,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **converterType** | [**ConverterType**](ConverterType.md) |  | 
-**rowIndex** | **[Number]** |  | 
+**rowIndex** | **[Number]** | The indices of the rows to fill | 
 
 

@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**content** | **String** |  | 
+**content** | **String** | The content of the feedback message. This can be an arbitrary string.  | 
 
 

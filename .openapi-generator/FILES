@@ -1,6 +1,7 @@
 .babelrc
 README.md
 docs/AddHeaderNameStructure.md
+docs/ColumnTypeMismatch.md
 docs/ColumnTypeMismatchReport.md
 docs/ConverterType.md
 docs/DefaultApi.md
@@ -45,6 +46,7 @@ src/ApiClient.js
 src/api/DefaultApi.js
 src/index.js
 src/model/AddHeaderNameStructure.js
+src/model/ColumnTypeMismatch.js
 src/model/ColumnTypeMismatchReport.js
 src/model/ConverterType.js
 src/model/EmptyColumnReport.js

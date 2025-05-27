@@ -5,8 +5,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **reportType** | [**ReportType**](ReportType.md) |  | 
-**columnIndex** | **[Number]** |  | 
+**mismatches** | [**[ColumnTypeMismatch]**](ColumnTypeMismatch.md) |  | 
 **rowIndex** | **[Number]** |  | 
+**columnIndex** | **[Number]** |  | 
 **startRow** | **Number** |  | 
 **startColumn** | **Number** |  | 
 **rowsToFill** | **[Number]** |  | 

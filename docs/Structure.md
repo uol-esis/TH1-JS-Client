@@ -4,23 +4,24 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**converterType** | [**ConverterType**](ConverterType.md) |  | [optional] 
-**name** | **String** |  | [optional] 
-**description** | **String** |  | [optional] 
-**rowIndex** | **[Number]** |  | 
-**columnIndex** | **[Number]** |  | 
-**startRow** | **Number** |  | [optional] 
-**startColumn** | **Number** |  | [optional] 
-**headerNames** | **[String]** |  | 
-**threshold** | **Number** |  | [optional] 
-**blackList** | **[String]** |  | [optional] 
-**search** | **String** |  | [optional] 
-**regexSearch** | **String** |  | [optional] 
-**replacement** | **String** |  | 
-**endRow** | **Number** |  | [optional] 
-**endColumn** | **Number** |  | [optional] 
-**delimiter** | **String** |  | [optional] 
-**headerName** | **String** |  | 
-**precedenceOrder** | **[Number]** |  | [optional] 
+**converterType** | [**ConverterType**](ConverterType.md) |  | 
+**name** | **String** | A name for the structure. This can be used to identify the structure in the UI. It can be any string.  | [optional] 
+**description** | **String** | A description for the structure. This can be used to provide more information about the structure in the UI. It can be any string.  | [optional] 
+**rowIndex** | **[Number]** | The indices of the rows to fill | 
+**columnIndex** | **[Number]** | The indices of the columns to merge | 
+**startRow** | **Number** | The start row index of the area to split (inclusive). | [optional] 
+**startColumn** | **Number** | The start column index of the area to search in (inclusive). | [optional] 
+**headerNames** | **[String]** | The header names | 
+**threshold** | **Number** | CURRENTLY NOT IMPLEMENTED BY BACKEND The maximum number of invalid values in a column to be considered invalid. | [optional] 
+**blockList** | **[String]** | The list of values to be considered invalid. | [optional] 
+**search** | **String** | The string to search for in the table. | [optional] 
+**regexSearch** | **String** | The regex pattern to search for in the table. | [optional] 
+**replacement** | **String** | The value to replace the found entries with. | 
+**endRow** | **Number** | The end row index of the area to split (exclusive). | [optional] 
+**endColumn** | **Number** | The end column index of the area to search in (exclusive). | [optional] 
+**delimiter** | **String** | The delimiter to split the entries by. Line break by default.  | [optional] 
+**blackList** | **[String]** | The list of values to be considered invalid. | [optional] 
+**headerName** | **String** | The name of the new column | 
+**precedenceOrder** | **[Number]** | The order in which the cells will be checked for non-empty values | [optional] 
 
 
