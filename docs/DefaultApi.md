@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 ## convertTable
 
-> convertTable(tableStructureId, file)
+> convertTable(tableStructureId, file, opts)
 
 Convert a table and save it to the database
 
@@ -35,7 +35,10 @@ BasicAuth.password = 'YOUR PASSWORD';
 let apiInstance = new Th1.DefaultApi();
 let tableStructureId = 789; // Number | 
 let file = "/path/to/file"; // File | 
-apiInstance.convertTable(tableStructureId, file, (error, data, response) => {
+let opts = {
+  'mode': "'CREATE'" // String | 
+};
+apiInstance.convertTable(tableStructureId, file, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -51,6 +54,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **tableStructureId** | **Number**|  | 
  **file** | **File**|  | 
+ **mode** | **String**|  | [optional] [default to &#39;CREATE&#39;]
 
 ### Return type
 
