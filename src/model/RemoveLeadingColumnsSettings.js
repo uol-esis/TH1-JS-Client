@@ -14,21 +14,20 @@
 import ApiClient from '../ApiClient';
 
 /**
- * The RemoveHeaderSettings model module.
- * @module model/RemoveHeaderSettings
+ * The RemoveLeadingColumnsSettings model module.
+ * @module model/RemoveLeadingColumnsSettings
  * @version 1.20.0
  */
-class RemoveHeaderSettings {
+class RemoveLeadingColumnsSettings {
     /**
-     * Constructs a new <code>RemoveHeaderSettings</code>.
-     * @alias module:model/RemoveHeaderSettings
+     * Constructs a new <code>RemoveLeadingColumnsSettings</code>.
+     * @alias module:model/RemoveLeadingColumnsSettings
      * @param enabled {Boolean} 
-     * @param threshold {Number} 
      * @param blockList {Array.<String>} 
      */
-    constructor(enabled, threshold, blockList) { 
+    constructor(enabled, blockList) { 
         
-        RemoveHeaderSettings.initialize(this, enabled, threshold, blockList);
+        RemoveLeadingColumnsSettings.initialize(this, enabled, blockList);
     }
 
     /**
@@ -36,28 +35,24 @@ class RemoveHeaderSettings {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, enabled, threshold, blockList) { 
+    static initialize(obj, enabled, blockList) { 
         obj['enabled'] = enabled || true;
-        obj['threshold'] = threshold;
         obj['blockList'] = blockList;
     }
 
     /**
-     * Constructs a <code>RemoveHeaderSettings</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>RemoveLeadingColumnsSettings</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/RemoveHeaderSettings} obj Optional instance to populate.
-     * @return {module:model/RemoveHeaderSettings} The populated <code>RemoveHeaderSettings</code> instance.
+     * @param {module:model/RemoveLeadingColumnsSettings} obj Optional instance to populate.
+     * @return {module:model/RemoveLeadingColumnsSettings} The populated <code>RemoveLeadingColumnsSettings</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new RemoveHeaderSettings();
+            obj = obj || new RemoveLeadingColumnsSettings();
 
             if (data.hasOwnProperty('enabled')) {
                 obj['enabled'] = ApiClient.convertToType(data['enabled'], 'Boolean');
-            }
-            if (data.hasOwnProperty('threshold')) {
-                obj['threshold'] = ApiClient.convertToType(data['threshold'], 'Number');
             }
             if (data.hasOwnProperty('blockList')) {
                 obj['blockList'] = ApiClient.convertToType(data['blockList'], ['String']);
@@ -67,13 +62,13 @@ class RemoveHeaderSettings {
     }
 
     /**
-     * Validates the JSON data with respect to <code>RemoveHeaderSettings</code>.
+     * Validates the JSON data with respect to <code>RemoveLeadingColumnsSettings</code>.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>RemoveHeaderSettings</code>.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>RemoveLeadingColumnsSettings</code>.
      */
     static validateJSON(data) {
         // check to make sure all required properties are present in the JSON string
-        for (const property of RemoveHeaderSettings.RequiredProperties) {
+        for (const property of RemoveLeadingColumnsSettings.RequiredProperties) {
             if (!data.hasOwnProperty(property)) {
                 throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
             }
@@ -89,28 +84,23 @@ class RemoveHeaderSettings {
 
 }
 
-RemoveHeaderSettings.RequiredProperties = ["enabled", "threshold", "blockList"];
+RemoveLeadingColumnsSettings.RequiredProperties = ["enabled", "blockList"];
 
 /**
  * @member {Boolean} enabled
  * @default true
  */
-RemoveHeaderSettings.prototype['enabled'] = true;
-
-/**
- * @member {Number} threshold
- */
-RemoveHeaderSettings.prototype['threshold'] = undefined;
+RemoveLeadingColumnsSettings.prototype['enabled'] = true;
 
 /**
  * @member {Array.<String>} blockList
  */
-RemoveHeaderSettings.prototype['blockList'] = undefined;
+RemoveLeadingColumnsSettings.prototype['blockList'] = undefined;
 
 
 
 
 
 
-export default RemoveHeaderSettings;
+export default RemoveLeadingColumnsSettings;
 

@@ -15,20 +15,20 @@ import ApiClient from '../ApiClient';
 import ConverterType from './ConverterType';
 
 /**
- * The RemoveInvalidRowsStructure model module.
- * @module model/RemoveInvalidRowsStructure
+ * The RemoveLeadingColumnStructure model module.
+ * @module model/RemoveLeadingColumnStructure
  * @version 1.20.0
  */
-class RemoveInvalidRowsStructure {
+class RemoveLeadingColumnStructure {
     /**
-     * Constructs a new <code>RemoveInvalidRowsStructure</code>.
-     * This converter removes invalid rows from the table. Invalid rows are defined as the rows of the table which only contain a maximum of threshold invalid values. The invalid values are empty cells by default but can be extended using the blacklist properties.  The converterType MUST be REMOVE_INVALID_ROWS. 
-     * @alias module:model/RemoveInvalidRowsStructure
+     * Constructs a new <code>RemoveLeadingColumnStructure</code>.
+     * This converter removes invalid columns from the begin of the table. The invalid values are empty cells by default but can be extended using the blockList properties. The converterType MUST be REMOVE_LEADING_COLUMN. 
+     * @alias module:model/RemoveLeadingColumnStructure
      * @param converterType {module:model/ConverterType} 
      */
     constructor(converterType) { 
         
-        RemoveInvalidRowsStructure.initialize(this, converterType);
+        RemoveLeadingColumnStructure.initialize(this, converterType);
     }
 
     /**
@@ -41,21 +41,18 @@ class RemoveInvalidRowsStructure {
     }
 
     /**
-     * Constructs a <code>RemoveInvalidRowsStructure</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>RemoveLeadingColumnStructure</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/RemoveInvalidRowsStructure} obj Optional instance to populate.
-     * @return {module:model/RemoveInvalidRowsStructure} The populated <code>RemoveInvalidRowsStructure</code> instance.
+     * @param {module:model/RemoveLeadingColumnStructure} obj Optional instance to populate.
+     * @return {module:model/RemoveLeadingColumnStructure} The populated <code>RemoveLeadingColumnStructure</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new RemoveInvalidRowsStructure();
+            obj = obj || new RemoveLeadingColumnStructure();
 
             if (data.hasOwnProperty('converterType')) {
                 obj['converterType'] = ConverterType.constructFromObject(data['converterType']);
-            }
-            if (data.hasOwnProperty('threshold')) {
-                obj['threshold'] = ApiClient.convertToType(data['threshold'], 'Number');
             }
             if (data.hasOwnProperty('blockList')) {
                 obj['blockList'] = ApiClient.convertToType(data['blockList'], ['String']);
@@ -65,13 +62,13 @@ class RemoveInvalidRowsStructure {
     }
 
     /**
-     * Validates the JSON data with respect to <code>RemoveInvalidRowsStructure</code>.
+     * Validates the JSON data with respect to <code>RemoveLeadingColumnStructure</code>.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>RemoveInvalidRowsStructure</code>.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>RemoveLeadingColumnStructure</code>.
      */
     static validateJSON(data) {
         // check to make sure all required properties are present in the JSON string
-        for (const property of RemoveInvalidRowsStructure.RequiredProperties) {
+        for (const property of RemoveLeadingColumnStructure.RequiredProperties) {
             if (!data.hasOwnProperty(property)) {
                 throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
             }
@@ -87,29 +84,23 @@ class RemoveInvalidRowsStructure {
 
 }
 
-RemoveInvalidRowsStructure.RequiredProperties = ["converterType"];
+RemoveLeadingColumnStructure.RequiredProperties = ["converterType"];
 
 /**
  * @member {module:model/ConverterType} converterType
  */
-RemoveInvalidRowsStructure.prototype['converterType'] = undefined;
-
-/**
- * The maximum number of invalid values in a row to be considered invalid.
- * @member {Number} threshold
- */
-RemoveInvalidRowsStructure.prototype['threshold'] = undefined;
+RemoveLeadingColumnStructure.prototype['converterType'] = undefined;
 
 /**
  * The list of values to be considered invalid.
  * @member {Array.<String>} blockList
  */
-RemoveInvalidRowsStructure.prototype['blockList'] = undefined;
+RemoveLeadingColumnStructure.prototype['blockList'] = undefined;
 
 
 
 
 
 
-export default RemoveInvalidRowsStructure;
+export default RemoveLeadingColumnStructure;
 
