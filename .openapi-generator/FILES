@@ -25,6 +25,9 @@ docs/RemoveHeaderSettings.md
 docs/RemoveHeaderStructure.md
 docs/RemoveInvalidRowsSettings.md
 docs/RemoveInvalidRowsStructure.md
+docs/RemoveLeadingColumnSettings.md
+docs/RemoveLeadingColumnStructure.md
+docs/RemoveLeadingColumnsSettings.md
 docs/RemoveRowByIndexStructure.md
 docs/RemoveTrailingColumnStructure.md
 docs/ReplaceEntriesStructure.md
@@ -69,6 +72,9 @@ src/model/RemoveHeaderSettings.js
 src/model/RemoveHeaderStructure.js
 src/model/RemoveInvalidRowsSettings.js
 src/model/RemoveInvalidRowsStructure.js
+src/model/RemoveLeadingColumnSettings.js
+src/model/RemoveLeadingColumnStructure.js
+src/model/RemoveLeadingColumnsSettings.js
 src/model/RemoveRowByIndexStructure.js
 src/model/RemoveTrailingColumnStructure.js
 src/model/ReplaceEntriesStructure.js

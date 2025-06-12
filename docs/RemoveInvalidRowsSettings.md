@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **enabled** | **Boolean** |  | [default to false]
-**threshold** | **Number** |  | [default to 2]
+**threshold** | **Number** |  | 
 **blockList** | **[String]** |  | 
 
 

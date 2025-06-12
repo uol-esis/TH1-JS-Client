@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **startRow** | **Number** | The start row index of the area to split (inclusive). | [optional] 
 **startColumn** | **Number** | The start column index of the area to search in (inclusive). | [optional] 
 **headerNames** | **[String]** | The header names | 
-**threshold** | **Number** | CURRENTLY NOT IMPLEMENTED BY BACKEND The maximum number of invalid values in a column to be considered invalid. | [optional] 
+**threshold** | **Number** | The maximum number of invalid values in a row to be considered invalid. | [optional] 
 **blockList** | **[String]** | The list of values to be considered invalid. | [optional] 
 **search** | **String** | The string to search for in the table. | [optional] 
 **regexSearch** | **String** | The regex pattern to search for in the table. | [optional] 
@@ -20,7 +20,6 @@ Name | Type | Description | Notes
 **endRow** | **Number** | The end row index of the area to split (exclusive). | [optional] 
 **endColumn** | **Number** | The end column index of the area to search in (exclusive). | [optional] 
 **delimiter** | **String** | The delimiter to split the entries by. Line break by default.  | [optional] 
-**blackList** | **[String]** | The list of values to be considered invalid. | [optional] 
 **headerName** | **String** | The name of the new column | 
 **precedenceOrder** | **[Number]** | The order in which the cells will be checked for non-empty values | [optional] 
 

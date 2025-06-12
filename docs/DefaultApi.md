@@ -27,10 +27,9 @@ Convert a table and save it to the database
 ```javascript
 import Th1 from 'th1';
 let defaultClient = Th1.ApiClient.instance;
-// Configure HTTP basic authorization: BasicAuth
-let BasicAuth = defaultClient.authentications['BasicAuth'];
-BasicAuth.username = 'YOUR USERNAME';
-BasicAuth.password = 'YOUR PASSWORD';
+// Configure OAuth2 access token for authorization: oAuth2Auth
+let oAuth2Auth = defaultClient.authentications['oAuth2Auth'];
+oAuth2Auth.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new Th1.DefaultApi();
 let tableStructureId = 789; // Number | 
@@ -62,7 +61,7 @@ null (empty response body)
 
 ### Authorization
 
-[BasicAuth](../README.md#BasicAuth)
+[oAuth2Auth](../README.md#oAuth2Auth)
 
 ### HTTP request headers
 
@@ -81,10 +80,9 @@ Create a new table structure
 ```javascript
 import Th1 from 'th1';
 let defaultClient = Th1.ApiClient.instance;
-// Configure HTTP basic authorization: BasicAuth
-let BasicAuth = defaultClient.authentications['BasicAuth'];
-BasicAuth.username = 'YOUR USERNAME';
-BasicAuth.password = 'YOUR PASSWORD';
+// Configure OAuth2 access token for authorization: oAuth2Auth
+let oAuth2Auth = defaultClient.authentications['oAuth2Auth'];
+oAuth2Auth.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new Th1.DefaultApi();
 let tableStructure = new Th1.TableStructure(); // TableStructure | 
@@ -110,7 +108,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BasicAuth](../README.md#BasicAuth)
+[oAuth2Auth](../README.md#oAuth2Auth)
 
 ### HTTP request headers
 
@@ -129,10 +127,9 @@ Delete table structure by id
 ```javascript
 import Th1 from 'th1';
 let defaultClient = Th1.ApiClient.instance;
-// Configure HTTP basic authorization: BasicAuth
-let BasicAuth = defaultClient.authentications['BasicAuth'];
-BasicAuth.username = 'YOUR USERNAME';
-BasicAuth.password = 'YOUR PASSWORD';
+// Configure OAuth2 access token for authorization: oAuth2Auth
+let oAuth2Auth = defaultClient.authentications['oAuth2Auth'];
+oAuth2Auth.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new Th1.DefaultApi();
 let id = 789; // Number | 
@@ -158,7 +155,7 @@ null (empty response body)
 
 ### Authorization
 
-[BasicAuth](../README.md#BasicAuth)
+[oAuth2Auth](../README.md#oAuth2Auth)
 
 ### HTTP request headers
 
@@ -177,10 +174,9 @@ Convert a table and return the result as a file
 ```javascript
 import Th1 from 'th1';
 let defaultClient = Th1.ApiClient.instance;
-// Configure HTTP basic authorization: BasicAuth
-let BasicAuth = defaultClient.authentications['BasicAuth'];
-BasicAuth.username = 'YOUR USERNAME';
-BasicAuth.password = 'YOUR PASSWORD';
+// Configure OAuth2 access token for authorization: oAuth2Auth
+let oAuth2Auth = defaultClient.authentications['oAuth2Auth'];
+oAuth2Auth.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new Th1.DefaultApi();
 let file = "/path/to/file"; // File | 
@@ -208,7 +204,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BasicAuth](../README.md#BasicAuth)
+[oAuth2Auth](../README.md#oAuth2Auth)
 
 ### HTTP request headers
 
@@ -227,10 +223,9 @@ Generate a tableStructure and return the result as a json
 ```javascript
 import Th1 from 'th1';
 let defaultClient = Th1.ApiClient.instance;
-// Configure HTTP basic authorization: BasicAuth
-let BasicAuth = defaultClient.authentications['BasicAuth'];
-BasicAuth.username = 'YOUR USERNAME';
-BasicAuth.password = 'YOUR PASSWORD';
+// Configure OAuth2 access token for authorization: oAuth2Auth
+let oAuth2Auth = defaultClient.authentications['oAuth2Auth'];
+oAuth2Auth.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new Th1.DefaultApi();
 let file = "/path/to/file"; // File | 
@@ -258,7 +253,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BasicAuth](../README.md#BasicAuth)
+[oAuth2Auth](../README.md#oAuth2Auth)
 
 ### HTTP request headers
 
@@ -277,10 +272,9 @@ Get a table structure by id
 ```javascript
 import Th1 from 'th1';
 let defaultClient = Th1.ApiClient.instance;
-// Configure HTTP basic authorization: BasicAuth
-let BasicAuth = defaultClient.authentications['BasicAuth'];
-BasicAuth.username = 'YOUR USERNAME';
-BasicAuth.password = 'YOUR PASSWORD';
+// Configure OAuth2 access token for authorization: oAuth2Auth
+let oAuth2Auth = defaultClient.authentications['oAuth2Auth'];
+oAuth2Auth.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new Th1.DefaultApi();
 let id = 789; // Number | 
@@ -306,7 +300,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BasicAuth](../README.md#BasicAuth)
+[oAuth2Auth](../README.md#oAuth2Auth)
 
 ### HTTP request headers
 
@@ -325,10 +319,9 @@ Get all table structures
 ```javascript
 import Th1 from 'th1';
 let defaultClient = Th1.ApiClient.instance;
-// Configure HTTP basic authorization: BasicAuth
-let BasicAuth = defaultClient.authentications['BasicAuth'];
-BasicAuth.username = 'YOUR USERNAME';
-BasicAuth.password = 'YOUR PASSWORD';
+// Configure OAuth2 access token for authorization: oAuth2Auth
+let oAuth2Auth = defaultClient.authentications['oAuth2Auth'];
+oAuth2Auth.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new Th1.DefaultApi();
 apiInstance.getTableStructures((error, data, response) => {
@@ -350,7 +343,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[BasicAuth](../README.md#BasicAuth)
+[oAuth2Auth](../README.md#oAuth2Auth)
 
 ### HTTP request headers
 
@@ -369,10 +362,9 @@ Convert a table and return a preview of the result
 ```javascript
 import Th1 from 'th1';
 let defaultClient = Th1.ApiClient.instance;
-// Configure HTTP basic authorization: BasicAuth
-let BasicAuth = defaultClient.authentications['BasicAuth'];
-BasicAuth.username = 'YOUR USERNAME';
-BasicAuth.password = 'YOUR PASSWORD';
+// Configure OAuth2 access token for authorization: oAuth2Auth
+let oAuth2Auth = defaultClient.authentications['oAuth2Auth'];
+oAuth2Auth.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new Th1.DefaultApi();
 let file = "/path/to/file"; // File | 
@@ -404,7 +396,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BasicAuth](../README.md#BasicAuth)
+[oAuth2Auth](../README.md#oAuth2Auth)
 
 ### HTTP request headers
 
@@ -423,10 +415,9 @@ Submit feedback
 ```javascript
 import Th1 from 'th1';
 let defaultClient = Th1.ApiClient.instance;
-// Configure HTTP basic authorization: BasicAuth
-let BasicAuth = defaultClient.authentications['BasicAuth'];
-BasicAuth.username = 'YOUR USERNAME';
-BasicAuth.password = 'YOUR PASSWORD';
+// Configure OAuth2 access token for authorization: oAuth2Auth
+let oAuth2Auth = defaultClient.authentications['oAuth2Auth'];
+oAuth2Auth.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new Th1.DefaultApi();
 let feedback = new Th1.Feedback(); // Feedback | 
@@ -452,7 +443,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BasicAuth](../README.md#BasicAuth)
+[oAuth2Auth](../README.md#oAuth2Auth)
 
 ### HTTP request headers
 

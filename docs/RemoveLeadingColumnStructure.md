@@ -1,4 +1,4 @@
-# Th1.RemoveTrailingColumnStructure
+# Th1.RemoveLeadingColumnStructure
 
 ## Properties
 
