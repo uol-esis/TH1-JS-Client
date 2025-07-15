@@ -15,5 +15,7 @@ Name | Type | Description | Notes
 **headerNames** | **[String]** |  | 
 **cells** | [**[Position]**](Position.md) |  | [optional] 
 **mergeables** | **[Number]** |  | [optional] 
+**delimiter** | **String** |  | 
+**detected** | **Boolean** | True if the matrix is detected as transposed, false otherwise | 
 
 

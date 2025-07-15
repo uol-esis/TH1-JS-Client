@@ -23,4 +23,6 @@
 
 * `SUM` (value: `"SUM"`)
 
+* `TRANSPOSE_MATRIX` (value: `"TRANSPOSE_MATRIX"`)
+
 

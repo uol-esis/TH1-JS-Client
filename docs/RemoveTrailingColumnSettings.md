@@ -1,4 +1,4 @@
-# Th1.RemoveColumnsSettings
+# Th1.RemoveTrailingColumnSettings
 
 ## Properties
 

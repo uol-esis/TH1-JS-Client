@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **rowIndex** | **[Number]** | The indices of the rows to fill | 
 **columnIndex** | **[Number]** | The indices of the columns to merge | 
 **startRow** | **Number** | The start row index of the area to split (inclusive). | [optional] 
-**startColumn** | **Number** | The start column index of the area to search in (inclusive). | [optional] 
+**startColumn** | **Number** | The index of the first data column to the right of the grouped header. | [optional] 
 **headerNames** | **[String]** | The header names | 
 **threshold** | **Number** | The maximum number of invalid values in a row to be considered invalid. | [optional] 
 **blockList** | **[String]** | The list of values to be considered invalid. | [optional] 
@@ -18,9 +18,11 @@ Name | Type | Description | Notes
 **regexSearch** | **String** | The regex pattern to search for in the table. | [optional] 
 **replacement** | **String** | The value to replace the found entries with. | 
 **endRow** | **Number** | The end row index of the area to split (exclusive). | [optional] 
-**endColumn** | **Number** | The end column index of the area to search in (exclusive). | [optional] 
 **delimiter** | **String** | The delimiter to split the entries by. Line break by default.  | [optional] 
 **headerName** | **String** | The name of the new column | 
 **precedenceOrder** | **[Number]** | The order in which the cells will be checked for non-empty values | [optional] 
+**pivotField** | **{String: [Number]}** |  | [optional] 
+**blockIndices** | **[Number]** | Indices that define the start of new data blocks | [optional] 
+**keysToCarryForward** | **[String]** | Column names whose values should be carried forward if empty | [optional] 
 
 

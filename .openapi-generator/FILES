@@ -15,6 +15,7 @@ docs/GroupedHeaderReport.md
 docs/MergeColumnsStructure.md
 docs/MergeableColumnsReport.md
 docs/MissingEntryReport.md
+docs/PivotMatrixStructure.md
 docs/Position.md
 docs/RemoveColumnByIndexStructure.md
 docs/RemoveColumnsSettings.md
@@ -29,6 +30,7 @@ docs/RemoveLeadingColumnSettings.md
 docs/RemoveLeadingColumnStructure.md
 docs/RemoveLeadingColumnsSettings.md
 docs/RemoveRowByIndexStructure.md
+docs/RemoveTrailingColumnSettings.md
 docs/RemoveTrailingColumnStructure.md
 docs/ReplaceEntriesStructure.md
 docs/Report.md
@@ -43,6 +45,8 @@ docs/TableStructure.md
 docs/TableStructureGenerationResponse.md
 docs/TableStructureGenerationSettings.md
 docs/TableStructureSummary.md
+docs/TransposeMatrixReport.md
+docs/TransposeMatrixStructure.md
 mocha.opts
 package.json
 src/ApiClient.js
@@ -62,6 +66,7 @@ src/model/GroupedHeaderReport.js
 src/model/MergeColumnsStructure.js
 src/model/MergeableColumnsReport.js
 src/model/MissingEntryReport.js
+src/model/PivotMatrixStructure.js
 src/model/Position.js
 src/model/RemoveColumnByIndexStructure.js
 src/model/RemoveColumnsSettings.js
@@ -76,6 +81,7 @@ src/model/RemoveLeadingColumnSettings.js
 src/model/RemoveLeadingColumnStructure.js
 src/model/RemoveLeadingColumnsSettings.js
 src/model/RemoveRowByIndexStructure.js
+src/model/RemoveTrailingColumnSettings.js
 src/model/RemoveTrailingColumnStructure.js
 src/model/ReplaceEntriesStructure.js
 src/model/Report.js
@@ -90,3 +96,5 @@ src/model/TableStructure.js
 src/model/TableStructureGenerationResponse.js
 src/model/TableStructureGenerationSettings.js
 src/model/TableStructureSummary.js
+src/model/TransposeMatrixReport.js
+src/model/TransposeMatrixStructure.js

@@ -31,4 +31,8 @@
 
 * `MERGE_COLUMNS` (value: `"MERGE_COLUMNS"`)
 
+* `TRANSPOSE_MATRIX` (value: `"TRANSPOSE_MATRIX"`)
+
+* `PIVOT_MATRIX` (value: `"PIVOT_MATRIX"`)
+
 

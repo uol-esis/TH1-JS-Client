@@ -15,20 +15,20 @@ import ApiClient from '../ApiClient';
 import ConverterType from './ConverterType';
 
 /**
- * The StructureSummary model module.
- * @module model/StructureSummary
+ * The TransposeMatrixStructure model module.
+ * @module model/TransposeMatrixStructure
  * @version 1.23.0
  */
-class StructureSummary {
+class TransposeMatrixStructure {
     /**
-     * Constructs a new <code>StructureSummary</code>.
-     * This is a summary of a structure. It only contains the converterType to identify the use of the structure. 
-     * @alias module:model/StructureSummary
+     * Constructs a new <code>TransposeMatrixStructure</code>.
+     * This converter transposes the given matrix. 
+     * @alias module:model/TransposeMatrixStructure
      * @param converterType {module:model/ConverterType} 
      */
     constructor(converterType) { 
         
-        StructureSummary.initialize(this, converterType);
+        TransposeMatrixStructure.initialize(this, converterType);
     }
 
     /**
@@ -41,15 +41,15 @@ class StructureSummary {
     }
 
     /**
-     * Constructs a <code>StructureSummary</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>TransposeMatrixStructure</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/StructureSummary} obj Optional instance to populate.
-     * @return {module:model/StructureSummary} The populated <code>StructureSummary</code> instance.
+     * @param {module:model/TransposeMatrixStructure} obj Optional instance to populate.
+     * @return {module:model/TransposeMatrixStructure} The populated <code>TransposeMatrixStructure</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new StructureSummary();
+            obj = obj || new TransposeMatrixStructure();
 
             if (data.hasOwnProperty('converterType')) {
                 obj['converterType'] = ConverterType.constructFromObject(data['converterType']);
@@ -59,13 +59,13 @@ class StructureSummary {
     }
 
     /**
-     * Validates the JSON data with respect to <code>StructureSummary</code>.
+     * Validates the JSON data with respect to <code>TransposeMatrixStructure</code>.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>StructureSummary</code>.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TransposeMatrixStructure</code>.
      */
     static validateJSON(data) {
         // check to make sure all required properties are present in the JSON string
-        for (const property of StructureSummary.RequiredProperties) {
+        for (const property of TransposeMatrixStructure.RequiredProperties) {
             if (!data.hasOwnProperty(property)) {
                 throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
             }
@@ -77,17 +77,17 @@ class StructureSummary {
 
 }
 
-StructureSummary.RequiredProperties = ["converterType"];
+TransposeMatrixStructure.RequiredProperties = ["converterType"];
 
 /**
  * @member {module:model/ConverterType} converterType
  */
-StructureSummary.prototype['converterType'] = undefined;
+TransposeMatrixStructure.prototype['converterType'] = undefined;
 
 
 
 
 
 
-export default StructureSummary;
+export default TransposeMatrixStructure;
 

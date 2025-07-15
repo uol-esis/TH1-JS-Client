@@ -1,10 +1,9 @@
-# Th1.RemoveColumnsSettings
+# Th1.TransposeMatrixStructure
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**enabled** | **Boolean** |  | [default to true]
-**blockList** | **[String]** |  | 
+**converterType** | [**ConverterType**](ConverterType.md) |  | 
 
 

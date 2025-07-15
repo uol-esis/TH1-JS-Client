@@ -14,21 +14,20 @@
 import ApiClient from '../ApiClient';
 
 /**
- * The RemoveInvalidRowsSettings model module.
- * @module model/RemoveInvalidRowsSettings
+ * The RemoveTrailingColumnSettings model module.
+ * @module model/RemoveTrailingColumnSettings
  * @version 1.23.0
  */
-class RemoveInvalidRowsSettings {
+class RemoveTrailingColumnSettings {
     /**
-     * Constructs a new <code>RemoveInvalidRowsSettings</code>.
-     * @alias module:model/RemoveInvalidRowsSettings
+     * Constructs a new <code>RemoveTrailingColumnSettings</code>.
+     * @alias module:model/RemoveTrailingColumnSettings
      * @param enabled {Boolean} 
-     * @param threshold {Number} 
      * @param blockList {Array.<String>} 
      */
-    constructor(enabled, threshold, blockList) { 
+    constructor(enabled, blockList) { 
         
-        RemoveInvalidRowsSettings.initialize(this, enabled, threshold, blockList);
+        RemoveTrailingColumnSettings.initialize(this, enabled, blockList);
     }
 
     /**
@@ -36,28 +35,24 @@ class RemoveInvalidRowsSettings {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, enabled, threshold, blockList) { 
-        obj['enabled'] = enabled || false;
-        obj['threshold'] = threshold;
+    static initialize(obj, enabled, blockList) { 
+        obj['enabled'] = enabled || true;
         obj['blockList'] = blockList;
     }
 
     /**
-     * Constructs a <code>RemoveInvalidRowsSettings</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>RemoveTrailingColumnSettings</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/RemoveInvalidRowsSettings} obj Optional instance to populate.
-     * @return {module:model/RemoveInvalidRowsSettings} The populated <code>RemoveInvalidRowsSettings</code> instance.
+     * @param {module:model/RemoveTrailingColumnSettings} obj Optional instance to populate.
+     * @return {module:model/RemoveTrailingColumnSettings} The populated <code>RemoveTrailingColumnSettings</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new RemoveInvalidRowsSettings();
+            obj = obj || new RemoveTrailingColumnSettings();
 
             if (data.hasOwnProperty('enabled')) {
                 obj['enabled'] = ApiClient.convertToType(data['enabled'], 'Boolean');
-            }
-            if (data.hasOwnProperty('threshold')) {
-                obj['threshold'] = ApiClient.convertToType(data['threshold'], 'Number');
             }
             if (data.hasOwnProperty('blockList')) {
                 obj['blockList'] = ApiClient.convertToType(data['blockList'], ['String']);
@@ -67,13 +62,13 @@ class RemoveInvalidRowsSettings {
     }
 
     /**
-     * Validates the JSON data with respect to <code>RemoveInvalidRowsSettings</code>.
+     * Validates the JSON data with respect to <code>RemoveTrailingColumnSettings</code>.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>RemoveInvalidRowsSettings</code>.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>RemoveTrailingColumnSettings</code>.
      */
     static validateJSON(data) {
         // check to make sure all required properties are present in the JSON string
-        for (const property of RemoveInvalidRowsSettings.RequiredProperties) {
+        for (const property of RemoveTrailingColumnSettings.RequiredProperties) {
             if (!data.hasOwnProperty(property)) {
                 throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
             }
@@ -89,28 +84,23 @@ class RemoveInvalidRowsSettings {
 
 }
 
-RemoveInvalidRowsSettings.RequiredProperties = ["enabled", "threshold", "blockList"];
+RemoveTrailingColumnSettings.RequiredProperties = ["enabled", "blockList"];
 
 /**
  * @member {Boolean} enabled
- * @default false
+ * @default true
  */
-RemoveInvalidRowsSettings.prototype['enabled'] = false;
-
-/**
- * @member {Number} threshold
- */
-RemoveInvalidRowsSettings.prototype['threshold'] = undefined;
+RemoveTrailingColumnSettings.prototype['enabled'] = true;
 
 /**
  * @member {Array.<String>} blockList
  */
-RemoveInvalidRowsSettings.prototype['blockList'] = undefined;
+RemoveTrailingColumnSettings.prototype['blockList'] = undefined;
 
 
 
 
 
 
-export default RemoveInvalidRowsSettings;
+export default RemoveTrailingColumnSettings;
 

@@ -15,21 +15,21 @@ import ApiClient from '../ApiClient';
 import ReportType from './ReportType';
 
 /**
- * The EmptyRowReport model module.
- * @module model/EmptyRowReport
+ * The TransposeMatrixReport model module.
+ * @module model/TransposeMatrixReport
  * @version 1.23.0
  */
-class EmptyRowReport {
+class TransposeMatrixReport {
     /**
-     * Constructs a new <code>EmptyRowReport</code>.
-     * This report indicates that the specified row is empty.  The reportType MUST be EMPTY_ROW. 
-     * @alias module:model/EmptyRowReport
+     * Constructs a new <code>TransposeMatrixReport</code>.
+     * Report indicating whether a matrix is detected as transposed
+     * @alias module:model/TransposeMatrixReport
      * @param reportType {module:model/ReportType} 
-     * @param rowIndex {Array.<Number>} 
+     * @param detected {Boolean} True if the matrix is detected as transposed, false otherwise
      */
-    constructor(reportType, rowIndex) { 
+    constructor(reportType, detected) { 
         
-        EmptyRowReport.initialize(this, reportType, rowIndex);
+        TransposeMatrixReport.initialize(this, reportType, detected);
     }
 
     /**
@@ -37,47 +37,43 @@ class EmptyRowReport {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, reportType, rowIndex) { 
+    static initialize(obj, reportType, detected) { 
         obj['reportType'] = reportType;
-        obj['rowIndex'] = rowIndex;
+        obj['detected'] = detected;
     }
 
     /**
-     * Constructs a <code>EmptyRowReport</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>TransposeMatrixReport</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/EmptyRowReport} obj Optional instance to populate.
-     * @return {module:model/EmptyRowReport} The populated <code>EmptyRowReport</code> instance.
+     * @param {module:model/TransposeMatrixReport} obj Optional instance to populate.
+     * @return {module:model/TransposeMatrixReport} The populated <code>TransposeMatrixReport</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new EmptyRowReport();
+            obj = obj || new TransposeMatrixReport();
 
             if (data.hasOwnProperty('reportType')) {
                 obj['reportType'] = ReportType.constructFromObject(data['reportType']);
             }
-            if (data.hasOwnProperty('rowIndex')) {
-                obj['rowIndex'] = ApiClient.convertToType(data['rowIndex'], ['Number']);
+            if (data.hasOwnProperty('detected')) {
+                obj['detected'] = ApiClient.convertToType(data['detected'], 'Boolean');
             }
         }
         return obj;
     }
 
     /**
-     * Validates the JSON data with respect to <code>EmptyRowReport</code>.
+     * Validates the JSON data with respect to <code>TransposeMatrixReport</code>.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>EmptyRowReport</code>.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TransposeMatrixReport</code>.
      */
     static validateJSON(data) {
         // check to make sure all required properties are present in the JSON string
-        for (const property of EmptyRowReport.RequiredProperties) {
+        for (const property of TransposeMatrixReport.RequiredProperties) {
             if (!data.hasOwnProperty(property)) {
                 throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
             }
-        }
-        // ensure the json data is an array
-        if (!Array.isArray(data['rowIndex'])) {
-            throw new Error("Expected the field `rowIndex` to be an array in the JSON data but got " + data['rowIndex']);
         }
 
         return true;
@@ -86,22 +82,23 @@ class EmptyRowReport {
 
 }
 
-EmptyRowReport.RequiredProperties = ["reportType", "rowIndex"];
+TransposeMatrixReport.RequiredProperties = ["reportType", "detected"];
 
 /**
  * @member {module:model/ReportType} reportType
  */
-EmptyRowReport.prototype['reportType'] = undefined;
+TransposeMatrixReport.prototype['reportType'] = undefined;
 
 /**
- * @member {Array.<Number>} rowIndex
+ * True if the matrix is detected as transposed, false otherwise
+ * @member {Boolean} detected
  */
-EmptyRowReport.prototype['rowIndex'] = undefined;
+TransposeMatrixReport.prototype['detected'] = undefined;
 
 
 
 
 
 
-export default EmptyRowReport;
+export default TransposeMatrixReport;
 
