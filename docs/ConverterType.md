@@ -21,7 +21,7 @@
 
 * `REPLACE_ENTRIES` (value: `"REPLACE_ENTRIES"`)
 
-* `SPLIT_ROW` (value: `"SPLIT_ROW"`)
+* `SPLIT_CELL` (value: `"SPLIT_CELL"`)
 
 * `REMOVE_INVALID_ROWS` (value: `"REMOVE_INVALID_ROWS"`)
 
@@ -34,5 +34,7 @@
 * `TRANSPOSE_MATRIX` (value: `"TRANSPOSE_MATRIX"`)
 
 * `PIVOT_MATRIX` (value: `"PIVOT_MATRIX"`)
+
+* `REMOVE_KEYWORD` (value: `"REMOVE_KEYWORD"`)
 
 

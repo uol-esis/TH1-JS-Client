@@ -26,6 +26,8 @@ docs/RemoveHeaderSettings.md
 docs/RemoveHeaderStructure.md
 docs/RemoveInvalidRowsSettings.md
 docs/RemoveInvalidRowsStructure.md
+docs/RemoveKeywordsSettings.md
+docs/RemoveKeywordsStructure.md
 docs/RemoveLeadingColumnSettings.md
 docs/RemoveLeadingColumnStructure.md
 docs/RemoveLeadingColumnsSettings.md
@@ -36,8 +38,8 @@ docs/ReplaceEntriesStructure.md
 docs/Report.md
 docs/ReportType.md
 docs/SameAsHeaderReport.md
+docs/SplitCellStructure.md
 docs/SplitRowReport.md
-docs/SplitRowStructure.md
 docs/Structure.md
 docs/StructureSummary.md
 docs/SumReport.md
@@ -77,6 +79,8 @@ src/model/RemoveHeaderSettings.js
 src/model/RemoveHeaderStructure.js
 src/model/RemoveInvalidRowsSettings.js
 src/model/RemoveInvalidRowsStructure.js
+src/model/RemoveKeywordsSettings.js
+src/model/RemoveKeywordsStructure.js
 src/model/RemoveLeadingColumnSettings.js
 src/model/RemoveLeadingColumnStructure.js
 src/model/RemoveLeadingColumnsSettings.js
@@ -87,8 +91,8 @@ src/model/ReplaceEntriesStructure.js
 src/model/Report.js
 src/model/ReportType.js
 src/model/SameAsHeaderReport.js
+src/model/SplitCellStructure.js
 src/model/SplitRowReport.js
-src/model/SplitRowStructure.js
 src/model/Structure.js
 src/model/StructureSummary.js
 src/model/SumReport.js

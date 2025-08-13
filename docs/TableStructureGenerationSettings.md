@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **removeTrailingColumn** | [**RemoveTrailingColumnSettings**](RemoveTrailingColumnSettings.md) |  | [optional] 
 **removeLeadingColumn** | [**RemoveLeadingColumnSettings**](RemoveLeadingColumnSettings.md) |  | [optional] 
 **removeInvalidRows** | [**RemoveInvalidRowsSettings**](RemoveInvalidRowsSettings.md) |  | [optional] 
+**removeKeywords** | [**RemoveKeywordsSettings**](RemoveKeywordsSettings.md) |  | [optional] 
 **maxIterations** | **Number** |  | [optional] [default to 5]
-**sumBlockList** | **[String]** |  | [optional] 
 
 
