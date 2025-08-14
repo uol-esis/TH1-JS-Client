@@ -165,7 +165,7 @@ null (empty response body)
 
 ## fileConvertTable
 
-> File fileConvertTable(file, tableStructure)
+> File fileConvertTable(file, tableStructure, opts)
 
 Convert a table and return the result as a file
 
@@ -181,7 +181,10 @@ oAuth2Auth.accessToken = 'YOUR ACCESS TOKEN';
 let apiInstance = new Th1.DefaultApi();
 let file = "/path/to/file"; // File | 
 let tableStructure = new Th1.TableStructure(); // TableStructure | 
-apiInstance.fileConvertTable(file, tableStructure, (error, data, response) => {
+let opts = {
+  'page': 0 // Number | 
+};
+apiInstance.fileConvertTable(file, tableStructure, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -197,6 +200,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **file** | **File**|  | 
  **tableStructure** | [**TableStructure**](TableStructure.md)|  | 
+ **page** | **Number**|  | [optional] [default to 0]
 
 ### Return type
 
@@ -214,7 +218,7 @@ Name | Type | Description  | Notes
 
 ## generateTableStructure
 
-> TableStructureGenerationResponse generateTableStructure(file, settings)
+> TableStructureGenerationResponse generateTableStructure(file, settings, opts)
 
 Generate a tableStructure and return the result as a json
 
@@ -230,7 +234,10 @@ oAuth2Auth.accessToken = 'YOUR ACCESS TOKEN';
 let apiInstance = new Th1.DefaultApi();
 let file = "/path/to/file"; // File | 
 let settings = new Th1.TableStructureGenerationSettings(); // TableStructureGenerationSettings | 
-apiInstance.generateTableStructure(file, settings, (error, data, response) => {
+let opts = {
+  'page': 0 // Number | 
+};
+apiInstance.generateTableStructure(file, settings, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -246,6 +253,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **file** | **File**|  | 
  **settings** | [**TableStructureGenerationSettings**](TableStructureGenerationSettings.md)|  | 
+ **page** | **Number**|  | [optional] [default to 0]
 
 ### Return type
 
@@ -370,7 +378,8 @@ let apiInstance = new Th1.DefaultApi();
 let file = "/path/to/file"; // File | 
 let tableStructure = new Th1.TableStructure(); // TableStructure | 
 let opts = {
-  'limit': 10 // Number | 
+  'limit': 10, // Number | 
+  'page': 0 // Number | 
 };
 apiInstance.previewConvertTable(file, tableStructure, opts, (error, data, response) => {
   if (error) {
@@ -389,6 +398,7 @@ Name | Type | Description  | Notes
  **file** | **File**|  | 
  **tableStructure** | [**TableStructure**](TableStructure.md)|  | 
  **limit** | **Number**|  | [optional] [default to 10]
+ **page** | **Number**|  | [optional] [default to 0]
 
 ### Return type
 
