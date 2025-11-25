@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> Moved to [Monorepo](https://github.com/uol-esis/Th1nk)
+
 # th1
 
 Th1 - JavaScript client for th1
